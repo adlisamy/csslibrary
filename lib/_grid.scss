@@ -1,0 +1,62 @@
+@use 'sass:math';
+$grid-columns: 12;
+
+//base layout
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto ;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.row{
+    display: flex;
+    flex-flow: row wrap;  //if the screen gets too small it will wrap the column onto the next row down
+}
+
+//col classes
+@include xs {
+    @for $index from 1 through $grid-columns {
+        .col-#{$index}-xs{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($index * 100%,$grid-columns);
+        }
+    }
+}
+@include sm {
+    @for $index from 1 through $grid-columns {
+        .col-#{$index}-sm{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($index * 100%,$grid-columns);
+        }
+    }
+}
+@include md {
+    @for $index from 1 through $grid-columns {
+        .col-#{$index}-md{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($index * 100%,$grid-columns);
+        }
+    }
+}
+@include lg {
+    @for $index from 1 through $grid-columns {
+        .col-#{$index}-lg{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($index * 100%,$grid-columns);
+        }
+    }
+}
+@include xl {
+    @for $index from 1 through $grid-columns {
+        .col-#{$index}-xl{
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($index * 100%,$grid-columns);
+        }
+    }
+}
