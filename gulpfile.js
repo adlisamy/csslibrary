@@ -9,8 +9,15 @@ function buildStyles() {
     .pipe(dest("css"));
 }
 
-function watchTask() {
-  watch(["sass/**/*.scss","*.html"], buildStyles);
+function buildBaseLib() {
+  return src("lib/**/*.scss")
+    .pipe(sass())
+    .pipe(purgeCss({ content: ["*.html"] }))
+    .pipe(dest("css/lib"));
 }
 
-exports.default = series(buildStyles, watchTask);
+function watchTask() {
+  watch(["sass/**/*.scss","*.html","lib/**/*.scss"], buildStyles,buildBaseLib);
+}
+
+exports.default = series(buildBaseLib,buildStyles, watchTask);
