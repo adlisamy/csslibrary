@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp" : "gulp"
+    "gulp": "gulp"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-purgecss": "^4.0.3",
     "gulp-sass": "^5.0.0",
     "sass": "^1.42.0"
   }

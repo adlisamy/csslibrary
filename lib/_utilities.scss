@@ -1,5 +1,10 @@
 @use "sass:math";
-
+/* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  /*========== z index ==========*/
+  $z-tooltip: 10;  
+  $z-fixed: 100;
+  $z-modal: 100;
+  
 $utilities: (
   "padding": (
     "prefix": "p",
